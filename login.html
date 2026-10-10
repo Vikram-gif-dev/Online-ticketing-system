@@ -1,0 +1,78 @@
+`html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TripNest Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h2>TripNest</h2>
+    <p>Book your journey, your way.</p>
+</header>
+
+<div class="box login">
+    <h1>Login</h1>
+
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Create Account</button>
+
+    <p id="msg"></p>
+</div>
+
+<script>
+
+function register() {
+
+    let user = document.getElementById("user").value;
+    let pass = document.getElementById("pass").value;
+
+    if (user == "" || pass == "") {
+        alert("Please enter username and password");
+        return;
+    }
+
+    localStorage.setItem("user", user);
+    localStorage.setItem("pass", pass);
+
+    alert("Account created successfully!");
+}
+
+
+function login() {
+
+    let user = document.getElementById("user").value;
+    let pass = document.getElementById("pass").value;
+
+    let savedUser = localStorage.getItem("user");
+    let savedPass = localStorage.getItem("pass");
+
+    if (savedUser == null) {
+        document.getElementById("msg").innerText =
+            "Please create an account first.";
+        return;
+    }
+
+    if (user == savedUser && pass == savedPass) {
+
+        localStorage.setItem("login", "true");
+
+        window.location.href = "index.html";
+
+    } else {
+
+        document.getElementById("msg").innerText =
+            "Invalid username or password";
+
+    }
+}
+
+</script>
+
+</body>
+</html>

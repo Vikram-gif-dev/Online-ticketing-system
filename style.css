@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #172554;
+    color: white;
+    padding: 25px 8%;
+}
+
+header h2 {
+    margin: 0;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+.box {
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input, button {
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+input {
+    flex: 1;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.card {
+    width: 85%;
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 20px;
+    background: white;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+}
+
+.card button {
+    float: right;
+}
+
+.hidden {
+    display: none;
+}
+
+#seats {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.seat {
+    padding: 12px 5px;
+    background: #e5e7eb;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.seat:hover {
+    background: #93c5fd;
+}
+
+.selected-seat {
+    background: #22c55e;
+    color: white;
+}
+
+.login {
+    max-width: 450px;
+    text-align: center;
+}
+
+.login input {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.login button {
+    margin: 8px;
+}
+
+#msg {
+    color: red;
+}
+
+#message {
+    width: 85%;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: #172554;
+    color: white;
+}

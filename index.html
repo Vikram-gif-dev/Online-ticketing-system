@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TripNest - Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if (localStorage.getItem("login") != "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h2>TripNest</h2>
+    <p>Book your journey, your way.</p>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<section class="box">
+    <h1>Find Your Journey</h1>
+
+    <div class="search">
+        <input type="text" id="from" placeholder="From">
+        <input type="text" id="to" placeholder="To">
+        <input type="date" id="date">
+        <button onclick="searchBus()">Search</button>
+    </div>
+</section>
+
+<div id="results"></div>
+
+<div id="booking" class="box hidden">
+    <h2>Select Your Seat</h2>
+
+    <div id="seats"></div>
+
+    <p>Selected Seat: <b id="selected">None</b></p>
+    <p>Total: ₹<b id="price">0</b></p>
+
+    <button onclick="bookTicket()">Confirm Booking</button>
+</div>
+
+<div id="message"></div>
+
+<footer>
+    <p>TripNest © 2026 | Simple. Smart. Travel.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+function logout() {
+    localStorage.removeItem("login");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
